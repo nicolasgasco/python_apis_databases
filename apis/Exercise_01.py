@@ -1,3 +1,5 @@
+
+
 '''
 Using the requests package, make a GET request to the api behind this endpoint:
 
@@ -12,4 +14,10 @@ Print out:
 
 
 '''
+import requests
 
+base_url = "http://demo.codingnomads.co:8080/tasks_api/users"
+response = requests.get(base_url)
+print(f"Status code: {response.status_code}")
+print(f"Encoding of the response: {response.encoding}")
+print(f"Text of the rensponse body: {response.text}")
